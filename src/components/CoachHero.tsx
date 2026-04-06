@@ -55,7 +55,7 @@ export default function CoachHero() {
           >
             <div className="relative z-10 grid grid-cols-12 gap-4">
               {/* Fake Coach Dashboard */}
-              <div className="col-span-8 bg-white rounded-2xl shadow-2xl border border-gray-100 p-6 overflow-hidden">
+              <div className="col-span-8 hero-card-base widget-large shadow-2xl border border-gray-100 p-6 overflow-hidden">
                 <div className="flex items-center justify-between mb-6">
                   <div className="h-4 w-32 bg-gray-100 rounded"></div>
                   <div className="h-8 w-8 bg-brand-teal/10 rounded-full"></div>
@@ -78,7 +78,7 @@ export default function CoachHero() {
               </div>
 
               {/* Mobile Client App */}
-              <div className="col-span-4 -ml-8 mt-12 bg-brand-dark-blue rounded-[2.5rem] shadow-2xl border-[6px] border-gray-800 aspect-[9/19] overflow-hidden relative">
+              <div className="col-span-4 -ml-8 mt-12 bg-brand-dark-blue rounded-[2.5rem] shadow-2xl border-[6px] border-gray-800 aspect-[9/19] overflow-hidden relative product-lift">
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-20 h-4 bg-gray-800 rounded-b-xl z-20"></div>
                 <div className="p-4 pt-8">
                   <div className="h-3 w-16 bg-white/20 rounded mb-4"></div>
@@ -98,7 +98,7 @@ export default function CoachHero() {
             <motion.div
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -top-6 -right-4 z-20 bg-white p-4 rounded-xl shadow-xl border border-gray-100 flex items-center gap-3"
+              className="absolute -top-6 -right-4 z-20 hero-card-base p-4 rounded-xl shadow-xl border border-gray-100 flex items-center gap-3"
             >
               <div className="w-10 h-10 bg-brand-teal/10 rounded-lg flex items-center justify-center text-brand-teal">
                 <CheckCircle2 size={20} />
@@ -112,7 +112,7 @@ export default function CoachHero() {
             <motion.div
               animate={{ y: [0, 10, 0] }}
               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-              className="absolute top-1/2 -left-8 z-20 bg-white p-4 rounded-xl shadow-xl border border-gray-100 flex items-center gap-3"
+              className="absolute top-1/2 -left-8 z-20 hero-card-base p-4 rounded-xl shadow-xl border border-gray-100 flex items-center gap-3"
             >
               <div className="w-10 h-10 bg-brand-orange/10 rounded-lg flex items-center justify-center text-brand-orange font-bold text-xs">
                 1850
@@ -126,7 +126,7 @@ export default function CoachHero() {
             <motion.div
               animate={{ x: [0, 5, 0] }}
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-              className="absolute bottom-12 right-0 z-20 bg-white p-4 rounded-xl shadow-xl border border-gray-100 flex items-center gap-3"
+              className="absolute bottom-12 right-0 z-20 hero-card-base p-4 rounded-xl shadow-xl border border-gray-100 flex items-center gap-3"
             >
               <div className="w-10 h-10 bg-brand-teal/10 rounded-lg flex items-center justify-center text-brand-teal font-bold text-xs">
                 88%

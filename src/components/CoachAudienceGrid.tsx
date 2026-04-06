@@ -58,7 +58,8 @@ export default function CoachAudienceGrid() {
             <motion.div
               key={idx}
               whileHover={{ y: -8 }}
-              className="p-8 rounded-2xl border border-gray-100 bg-white shadow-sm hover:shadow-xl transition-all group"
+              className="p-8 rounded-2xl border border-gray-100 bg-white shadow-sm card-shadow-hover transition-all group animate-reveal"
+              style={{ animationDelay: `${idx * 0.1}s` }}
             >
               <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-6 ${item.color}`}>
                 <item.icon size={28} />
