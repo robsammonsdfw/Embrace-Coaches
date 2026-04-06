@@ -1,0 +1,27 @@
+{
+  "short_name": "EmbraceHealth",
+  "name": "EmbraceHealth | For Coaches & Providers",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#00B6A0",
+  "background_color": "#ffffff",
+  "description": "A coaching platform your clients will actually use."
+}
+
+/* 
+  ASSET REMINDER:
+  Place the following files in this 'public/' directory:
+  - icon.png (Favicon)
+  - logo.png (Brand Logo)
+  - 44740977.png (LegitScript Seal)
+  
+  Vite will serve these files at the root level (e.g., /icon.png) 
+  during both development and production builds.
+*/

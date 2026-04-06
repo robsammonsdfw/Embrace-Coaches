@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-teal: #00B6A0;
+  --color-brand-orange: #F26422;
+  --color-brand-dark-blue: #002534;
+  --color-brand-cream: #E6E7E9;
+}
+
+:root {
+  --brand-teal: #00B6A0;
+  --brand-orange: #F26422;
+  --brand-dark-blue: #002534;
+  --brand-cream: #E6E7E9;
+}
+
+body {
+  @apply font-sans text-brand-dark-blue;
+}
+
