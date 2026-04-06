@@ -64,7 +64,7 @@ export default function Footer() {
           <div>
             <h4 className="font-bold mb-6 text-sm uppercase tracking-wider text-gray-400">Brand</h4>
             <ul className="space-y-4 text-sm text-gray-300">
-              <li><a href="https://embracehealth.ai" className="hover:text-brand-teal transition-colors">Back to EmbraceHealth.ai</a></li>
+              <li><a href="https://www.embracehealth.ai" className="hover:text-brand-teal transition-colors">Back to EmbraceHealth.ai</a></li>
               <li><a href="#" className="hover:text-brand-teal transition-colors">For Employers</a></li>
               <li><a href="#" className="hover:text-brand-teal transition-colors">For Health Plans</a></li>
             </ul>
