@@ -5,6 +5,9 @@ import CoachHero from './components/CoachHero';
 import CoachAudienceGrid from './components/CoachAudienceGrid';
 import FeaturePillars from './components/FeaturePillars';
 import Footer from './components/Footer';
+// ... existing imports ...
+import CoachAudienceGrid from './components/CoachAudienceGrid'; // now Use Cases
+import FeaturePillars from './components/FeaturePillars'; // now Benefits
 
 // Helper to scroll to top on route change
 function ScrollToTop() {
