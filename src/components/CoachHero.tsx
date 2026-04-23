@@ -1,4 +1,4 @@
-import { ArrowRight, TrendingDown, TrendingUp } from 'lucide-react';
+import { CheckCircle2, ArrowRight, TrendingDown, TrendingUp } from 'lucide-react';
 import { motion } from 'motion/react';
 
 export default function CoachHero() {
@@ -6,7 +6,7 @@ export default function CoachHero() {
     <section className="bg-[#F9F7F2] py-16 lg:py-24 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left Content - Prism-style hero copy */}
+          {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -30,14 +30,14 @@ export default function CoachHero() {
             </div>
           </motion.div>
 
-          {/* Right Visual - Enhanced Prism metrics + your existing mockup style */}
+          {/* Right Visual */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative"
           >
-            {/* Prism metrics card */}
+            {/* Metrics Card (kept from previous) */}
             <div className="hero-card-base widget-large shadow-2xl border border-gray-100 p-8 mb-8">
               <div className="flex justify-between items-start mb-8">
                 <div>
@@ -64,23 +64,35 @@ export default function CoachHero() {
               <div className="text-center text-xs text-gray-400 pt-6 border-t">Powered by EmbraceHealth AI • Clinical-grade • Smartphone scan</div>
             </div>
 
-            {/* Keep your original mobile + floating elements for continuity */}
+            {/* NEW: Video for Coach Analytics View (right below metrics) */}
+            <div className="hero-card-base widget-large shadow-2xl border border-gray-100 overflow-hidden mb-8 relative">
+              <video
+                src="/prismmobile.mp4"   {/* Put your video file in public/ folder */}
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent pointer-events-none" />
+              <div className="absolute bottom-6 left-6 text-white text-sm font-medium flex items-center gap-2">
+                <div className="w-2 h-2 bg-brand-teal rounded-full animate-pulse" />
+                Live Coach Analytics Dashboard
+              </div>
+            </div>
+
+            {/* Original grid with mobile mockup (kept for visual balance) */}
             <div className="relative z-10 grid grid-cols-12 gap-4">
-              <div className="col-span-8 hero-card-base widget-large shadow-2xl border border-gray-100 p-6 overflow-hidden">
-                {/* existing fake dashboard placeholder */}
+              <div className="col-span-8 hero-card-base widget-large shadow-2xl border border-gray-100 p-6 overflow-hidden hidden lg:block">
+                {/* Optional fallback content if video doesn't load */}
                 <div className="flex items-center justify-between mb-6">
                   <div className="h-4 w-32 bg-gray-100 rounded"></div>
                   <div className="h-8 w-8 bg-brand-teal/10 rounded-full"></div>
                 </div>
-                <div className="space-y-4">
-                  <div className="h-32 bg-gray-50 rounded-xl border border-dashed border-gray-200 flex items-center justify-center">
-                    <span className="text-xs text-gray-400 font-mono">Coach Analytics View</span>
-                  </div>
-                </div>
               </div>
 
-              <div className="col-span-4 -ml-8 mt-12 bg-brand-dark-blue rounded-[2.5rem] shadow-2xl border-[6px] border-gray-800 aspect-[9/19] overflow-hidden relative product-lift">
-                {/* existing mobile mockup */}
+              {/* Mobile Client App Mockup */}
+              <div className="col-span-4 -ml-8 mt-12 bg-brand-dark-blue rounded-[2.5rem] shadow-2xl border-[6px] border-gray-800 aspect-[9/19] overflow-hidden relative product-lift lg:col-span-4">
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-20 h-4 bg-gray-800 rounded-b-xl z-20"></div>
                 <div className="p-4 pt-8">
                   <div className="h-3 w-16 bg-white/20 rounded mb-4"></div>
@@ -90,12 +102,13 @@ export default function CoachHero() {
                       <div className="h-2 w-10 bg-white/30 rounded mb-2"></div>
                       <div className="h-4 w-20 bg-white/60 rounded"></div>
                     </div>
+                    <div className="h-12 bg-white/10 rounded-lg"></div>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Floating body scan data cards (your original style) */}
+            {/* Floating Cards (kept from your original) */}
             <motion.div
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
@@ -107,6 +120,20 @@ export default function CoachHero() {
               <div>
                 <p className="text-xs font-bold text-brand-dark-blue">Body Scan</p>
                 <p className="text-[10px] text-gray-500">Completed 2m ago</p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              animate={{ y: [0, 10, 0] }}
+              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+              className="absolute top-1/2 -left-8 z-20 hero-card-base p-4 rounded-xl shadow-xl border border-gray-100 flex items-center gap-3"
+            >
+              <div className="w-10 h-10 bg-brand-orange/10 rounded-lg flex items-center justify-center text-brand-orange font-bold text-xs">
+                1850
+              </div>
+              <div>
+                <p className="text-xs font-bold text-brand-dark-blue">Macros</p>
+                <p className="text-[10px] text-gray-500">On Track (92%)</p>
               </div>
             </motion.div>
           </motion.div>
