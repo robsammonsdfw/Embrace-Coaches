@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { ArrowRight } from 'lucide-react';
-import { motion } from 'motion/react';
+import { motion, AnimatePresence } from 'motion/react';
 
 const useCases = [
   {
@@ -15,7 +15,7 @@ const useCases = [
       'Reduce friction to first value — no equipment, no gym visit, just immediate results',
       'Proven to drive significantly higher conversion rates than traditional free trials'
     ],
-    image: 'https://picsum.photos/id/1015/800/600' // ← Replace with your own high-quality body scan / coaching image
+    image: 'https://picsum.photos/id/1015/800/600' // ← Replace with real images
   },
   {
     id: 'engagement',
@@ -86,7 +86,7 @@ export default function CoachAudienceGrid() {
           <p className="text-lg text-gray-600">Click through the use cases below to explore how EmbraceHealth transforms your coaching.</p>
         </div>
 
-        {/* Tabs - exact match to your live site */}
+        {/* Tabs */}
         <div className="flex flex-wrap justify-center gap-x-8 border-b border-gray-200 mb-12 overflow-x-auto pb-2">
           {useCases.map((useCase, idx) => (
             <button
@@ -104,24 +104,29 @@ export default function CoachAudienceGrid() {
         </div>
 
         <div className="grid lg:grid-cols-12 gap-12 items-start">
-          {/* LEFT: Single changing image (this is the fix) */}
-          <motion.div
-            key={activeTab} // forces re-render + animation on tab change
-            initial={{ opacity: 0, x:20 }}
-            animate={{ opacity: 1, x:0 }}
-            transition={{ duration: 0.4 }}
-            className="lg:col-span-5 rounded-3xl overflow-hidden shadow-2xl aspect-video bg-gray-100"
-          >
-            <img
-              src={useCases[activeTab].image}
-              alt={useCases[activeTab].tab}
-              className="w-full h-full object-cover"
-            />
-          </motion.div>
+          {/* LEFT IMAGE — Wrapped in AnimatePresence + unique key */}
+          <div className="lg:col-span-5">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={`image-${useCases[activeTab].id}-${activeTab}`} // More unique key forces full remount
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 1.05 }}
+                transition={{ duration: 0.4 }}
+                className="rounded-3xl overflow-hidden shadow-2xl aspect-video bg-gray-100"
+              >
+                <img
+                  src={useCases[activeTab].image}
+                  alt={useCases[activeTab].tab}
+                  className="w-full h-full object-cover"
+                />
+              </motion.div>
+            </AnimatePresence>
+          </div>
 
-          {/* RIGHT: Content that updates with tab */}
+          {/* RIGHT CONTENT */}
           <motion.div
-            key={activeTab}
+            key={`content-${useCases[activeTab].id}-${activeTab}`}
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.4 }}
