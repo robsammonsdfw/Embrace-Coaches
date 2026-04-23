@@ -1,4 +1,4 @@
-import { ArrowRight, TrendingDown, TrendingUp } from 'lucide-react';
+import { CheckCircle2, ArrowRight, TrendingDown, TrendingUp } from 'lucide-react';
 import { motion } from 'motion/react';
 
 export default function CoachHero() {
@@ -37,8 +37,8 @@ export default function CoachHero() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative"
           >
-            {/* Metrics Card with image in the lower half */}
-            <div className="hero-card-base widget-large shadow-2xl border border-gray-100 p-8 relative overflow-hidden">
+           {/* Metrics Card with image in the lower half */}
+           <div className="hero-card-base widget-large shadow-2xl border border-gray-100 p-8 relative overflow-hidden">
               {/* Top: Body Fat & Lean Mass metrics */}
               <div className="flex justify-between items-start mb-8">
                 <div>
@@ -77,11 +77,27 @@ export default function CoachHero() {
               </div>
             </div>
 
-            {/* Mobile Client Mockup (unchanged) */}
-            <div className="relative z-10 grid grid-cols-12 gap-4 mt-8">
-              <div className="col-span-8 hidden lg:block" />
+            {/* Grid with Video in Coach Analytics View + Mobile Mockup */}
+            <div className="relative z-10 grid grid-cols-12 gap-4">
+              
+              <div className="col-span-8 hero-card-base widget-large shadow-2xl border border-gray-100 overflow-hidden relative">
+                <video
+                  src="/prismmobile.mp4"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
+                <div className="absolute bottom-6 left-6 text-white text-sm font-medium flex items-center gap-2">
+                  <div className="w-2 h-2 bg-brand-teal rounded-full animate-pulse" />
+                  Coach Analytics Dashboard
+                </div>
+              </div>
 
-              <div className="col-span-4 -ml-8 mt-12 bg-brand-dark-blue rounded-[2.5rem] shadow-2xl border-[6px] border-gray-800 aspect-[9/19] overflow-hidden relative product-lift lg:col-span-4">
+              {/* Mobile Client App Mockup (with recent body scan) */}
+              <div className="col-span-4 -ml-8 mt-12 bg-brand-dark-blue rounded-[2.5rem] shadow-2xl border-[6px] border-gray-800 aspect-[9/19] overflow-hidden relative product-lift">
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-20 h-4 bg-gray-800 rounded-b-xl z-20" />
                 <div className="p-4 pt-8">
                   <div className="h-3 w-16 bg-white/20 rounded mb-4" />
@@ -97,7 +113,7 @@ export default function CoachHero() {
               </div>
             </div>
 
-            {/* Floating Cards (unchanged) */}
+            {/* Floating Cards */}
             <motion.div
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
