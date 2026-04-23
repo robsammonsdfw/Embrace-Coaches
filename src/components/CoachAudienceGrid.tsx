@@ -7,21 +7,21 @@ const useCases = [
     id: 'acquisition',
     tab: 'Top-of-Funnel Client Acquisition',
     title: 'Convert prospects into paying clients with a free body scan health report',
-    subtitle: 'Client acquisition is expensive. Free trials commoditize your coaching. A free EmbraceHealth body scan delivers instant, personalized value prospects can’t get elsewhere.',
-    description: 'Give prospects a compelling reason to choose you without discounting. The 30-second scan becomes your most powerful lead magnet.',
+    subtitle: 'Client acquisition is expensive. Free trials commoditize your offering.',
+    description: 'A free EmbraceHealth body scan delivers instant, personalized value prospects can’t get elsewhere, driving higher conversion without discounting.',
     bullets: [
       'Offer a free 5-second face scan as a lead magnet that delivers full body composition insights instantly',
-      'Convert prospects with personalized health insights they can’t access without signing up for your coaching',
+      'Convert prospects with personalized health insights they can’t access without signing up',
       'Reduce friction to first value — no equipment, no gym visit, just immediate results',
       'Proven to drive significantly higher conversion rates than traditional free trials'
     ],
-    image: 'https://picsum.photos/id/1015/800/600' // ← replace with your own image URL
+    image: 'https://picsum.photos/id/1015/800/600' // ← Replace with your own high-quality body scan / coaching image
   },
   {
     id: 'engagement',
     tab: 'Client Engagement & Retention',
     title: 'Keep clients engaged and coming back with body insights beyond what a scale can tell them',
-    subtitle: 'Retention is the #1 challenge for coaches. Clients need to see real progress to stay motivated.',
+    subtitle: 'Retention is the #1 challenge for coaches.',
     description: 'EmbraceHealth shows muscle gains, fat loss, and body shape changes that keep clients excited even during weight plateaus.',
     bullets: [
       'Give clients a reason to open your app regularly with engaging progress visualization',
@@ -35,8 +35,8 @@ const useCases = [
     id: 'progress',
     tab: 'Progress Tracking & Motivation',
     title: 'Keep clients motivated by visualizing comprehensive progress beyond what the scale reveals',
-    subtitle: 'The scale doesn’t tell the full story. EmbraceHealth shows the truth: body recomposition with lean mass gains and fat loss.',
-    description: 'Clients stay motivated through plateaus when they can actually see what’s changing.',
+    subtitle: 'The scale doesn’t tell the full story.',
+    description: 'EmbraceHealth shows the truth: body recomposition with lean mass gains and fat loss.',
     bullets: [
       'Show body recomposition with lean mass increases and fat mass decreases',
       'Visualize progress with 3D body models and circumference changes across 14+ regions',
@@ -49,8 +49,8 @@ const useCases = [
     id: 'personalization',
     tab: 'Personalized Programming',
     title: 'Deliver truly personalized workout and nutrition recommendations based on body composition',
-    subtitle: 'One-size-fits-all programming doesn’t work. EmbraceHealth gives you precise data to tailor every program.',
-    description: 'Base every recommendation on each client’s actual lean mass, body fat percentage, and metabolic rate — not guesses.',
+    subtitle: 'One-size-fits-all doesn’t work.',
+    description: 'EmbraceHealth gives you precise data to tailor every program to each client’s actual body composition.',
     bullets: [
       'Tailor workouts based on current lean mass and body fat for optimal results',
       'Calculate accurate caloric needs using precise basal metabolic rate',
@@ -63,8 +63,8 @@ const useCases = [
     id: 'validation',
     tab: 'Body Recomposition Validation',
     title: 'Prove your coaching methodology works with objective body composition data',
-    subtitle: 'Marketing claims need proof. EmbraceHealth gives you clinical-grade data to back every result.',
-    description: 'Generate compelling before/after reports and case studies that build credibility and trust.',
+    subtitle: 'Marketing claims need proof.',
+    description: 'EmbraceHealth gives you clinical-grade data to back every result and build undeniable credibility.',
     bullets: [
       'Track skeletal muscle mass changes to validate strength training effectiveness',
       'Monitor body fat and visceral fat reduction with objective data',
@@ -86,7 +86,7 @@ export default function CoachAudienceGrid() {
           <p className="text-lg text-gray-600">Click through the use cases below to explore how EmbraceHealth transforms your coaching.</p>
         </div>
 
-        {/* Tabs */}
+        {/* Tabs - exact match to your live site */}
         <div className="flex flex-wrap justify-center gap-x-8 border-b border-gray-200 mb-12 overflow-x-auto pb-2">
           {useCases.map((useCase, idx) => (
             <button
@@ -104,9 +104,9 @@ export default function CoachAudienceGrid() {
         </div>
 
         <div className="grid lg:grid-cols-12 gap-12 items-start">
-          {/* Left Image */}
+          {/* LEFT: Single changing image (this is the fix) */}
           <motion.div
-            key={activeTab}
+            key={activeTab} // forces re-render + animation on tab change
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.4 }}
@@ -119,7 +119,7 @@ export default function CoachAudienceGrid() {
             />
           </motion.div>
 
-          {/* Right Content */}
+          {/* RIGHT: Content that updates with tab */}
           <motion.div
             key={activeTab}
             initial={{ opacity: 0, x: 20 }}
@@ -128,7 +128,7 @@ export default function CoachAudienceGrid() {
             className="lg:col-span-7"
           >
             <h3 className="text-3xl font-bold text-brand-dark-blue mb-2">{useCases[activeTab].title}</h3>
-            <p className="text-xl text-gray-600 mb-8">{useCases[activeTab].subtitle}</p>
+            <p className="text-xl text-gray-600 mb-6">{useCases[activeTab].subtitle}</p>
             <p className="text-gray-600 leading-relaxed mb-8">{useCases[activeTab].description}</p>
             
             <ul className="space-y-4 mb-10">
