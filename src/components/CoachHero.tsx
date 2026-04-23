@@ -41,9 +41,7 @@ export default function CoachHero() {
             <div className="hero-card-base widget-large shadow-2xl border border-gray-100 p-8 mb-8">
               <div className="flex justify-between items-start mb-8">
                 <div>
-                  <div className="flex items-center gap-2 text-sm font-medium text-gray-500 mb-1">
-                    BODY FAT
-                  </div>
+                  <div className="flex items-center gap-2 text-sm font-medium text-gray-500 mb-1">BODY FAT</div>
                   <div className="text-5xl font-bold text-brand-dark-blue">22.6%</div>
                   <div className="flex items-center gap-1 text-red-500 font-semibold">
                     <TrendingDown size={24} />
@@ -51,9 +49,7 @@ export default function CoachHero() {
                   </div>
                 </div>
                 <div className="text-right">
-                  <div className="flex items-center gap-2 text-sm font-medium text-gray-500 mb-1">
-                    LEAN MASS
-                  </div>
+                  <div className="flex items-center gap-2 text-sm font-medium text-gray-500 mb-1">LEAN MASS</div>
                   <div className="text-5xl font-bold text-brand-dark-blue">107.4 lb</div>
                   <div className="flex items-center gap-1 text-brand-teal font-semibold">
                     <TrendingUp size={24} />
@@ -66,28 +62,27 @@ export default function CoachHero() {
               </div>
             </div>
 
-            {/* Coach Analytics Video */}
-            <div className="hero-card-base widget-large shadow-2xl border border-gray-100 overflow-hidden mb-8 relative">
-              <video
-                src="/prismmobile.mp4"
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent pointer-events-none" />
-              <div className="absolute bottom-6 left-6 text-white text-sm font-medium flex items-center gap-2">
-                <div className="w-2 h-2 bg-brand-teal rounded-full animate-pulse" />
-                Live Coach Analytics Dashboard
-              </div>
-            </div>
-
-            {/* Mobile Client App Mockup */}
+            {/* Grid with Video in Coach Analytics View + Mobile Mockup */}
             <div className="relative z-10 grid grid-cols-12 gap-4">
-              <div className="col-span-8 hero-card-base widget-large shadow-2xl border border-gray-100 p-6 overflow-hidden hidden lg:block" />
               
-              <div className="col-span-4 -ml-8 mt-12 bg-brand-dark-blue rounded-[2.5rem] shadow-2xl border-[6px] border-gray-800 aspect-[9/19] overflow-hidden relative product-lift lg:col-span-4">
+              <div className="col-span-8 hero-card-base widget-large shadow-2xl border border-gray-100 overflow-hidden relative">
+                <video
+                  src="/prismmobile.mp4"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
+                <div className="absolute bottom-6 left-6 text-white text-sm font-medium flex items-center gap-2">
+                  <div className="w-2 h-2 bg-brand-teal rounded-full animate-pulse" />
+                  Coach Analytics Dashboard
+                </div>
+              </div>
+
+              {/* Mobile Client App Mockup (with recent body scan) */}
+              <div className="col-span-4 -ml-8 mt-12 bg-brand-dark-blue rounded-[2.5rem] shadow-2xl border-[6px] border-gray-800 aspect-[9/19] overflow-hidden relative product-lift">
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-20 h-4 bg-gray-800 rounded-b-xl z-20" />
                 <div className="p-4 pt-8">
                   <div className="h-3 w-16 bg-white/20 rounded mb-4" />
