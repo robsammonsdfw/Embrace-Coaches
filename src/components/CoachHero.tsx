@@ -3,7 +3,7 @@ import { motion } from 'motion/react';
 
 export default function CoachHero() {
   return (
-    <section className="bg-[#F9F7F2] py-16 lg:py-24 overflow-hidden">
+    <section className="bg-[#F9F7F2] pt-4 pb-16 lg:pt-8 lg:pb-24 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Content */}
