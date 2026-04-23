@@ -19,7 +19,7 @@ function CoachPortal() {
   return (
     <div className="min-h-screen bg-white">
       <CoachHeader />
-      <main>
+      <main className="pt-0">
         <CoachHero />
         <CoachAudienceGrid />
         <FeaturePillars />
