@@ -37,7 +37,7 @@ export default function CoachHero() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative"
           >
-            {/* Metrics Card (kept from previous) */}
+            {/* Metrics Card */}
             <div className="hero-card-base widget-large shadow-2xl border border-gray-100 p-8 mb-8">
               <div className="flex justify-between items-start mb-8">
                 <div>
@@ -61,13 +61,15 @@ export default function CoachHero() {
                   </div>
                 </div>
               </div>
-              <div className="text-center text-xs text-gray-400 pt-6 border-t">Powered by EmbraceHealth AI • Clinical-grade • Smartphone scan</div>
+              <div className="text-center text-xs text-gray-400 pt-6 border-t">
+                Powered by EmbraceHealth AI • Clinical-grade • Smartphone scan
+              </div>
             </div>
 
-            {/* NEW: Video for Coach Analytics View (right below metrics) */}
+            {/* Coach Analytics Video */}
             <div className="hero-card-base widget-large shadow-2xl border border-gray-100 overflow-hidden mb-8 relative">
               <video
-                src="/prismmobile.mp4"   {/* Put your video file in public/ folder */}
+                src="/prismmobile.mp4"
                 autoPlay
                 muted
                 loop
@@ -81,34 +83,27 @@ export default function CoachHero() {
               </div>
             </div>
 
-            {/* Original grid with mobile mockup (kept for visual balance) */}
+            {/* Mobile Client App Mockup */}
             <div className="relative z-10 grid grid-cols-12 gap-4">
-              <div className="col-span-8 hero-card-base widget-large shadow-2xl border border-gray-100 p-6 overflow-hidden hidden lg:block">
-                {/* Optional fallback content if video doesn't load */}
-                <div className="flex items-center justify-between mb-6">
-                  <div className="h-4 w-32 bg-gray-100 rounded"></div>
-                  <div className="h-8 w-8 bg-brand-teal/10 rounded-full"></div>
-                </div>
-              </div>
-
-              {/* Mobile Client App Mockup */}
+              <div className="col-span-8 hero-card-base widget-large shadow-2xl border border-gray-100 p-6 overflow-hidden hidden lg:block" />
+              
               <div className="col-span-4 -ml-8 mt-12 bg-brand-dark-blue rounded-[2.5rem] shadow-2xl border-[6px] border-gray-800 aspect-[9/19] overflow-hidden relative product-lift lg:col-span-4">
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-20 h-4 bg-gray-800 rounded-b-xl z-20"></div>
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-20 h-4 bg-gray-800 rounded-b-xl z-20" />
                 <div className="p-4 pt-8">
-                  <div className="h-3 w-16 bg-white/20 rounded mb-4"></div>
+                  <div className="h-3 w-16 bg-white/20 rounded mb-4" />
                   <div className="space-y-3">
-                    <div className="h-12 bg-white/10 rounded-lg"></div>
+                    <div className="h-12 bg-white/10 rounded-lg" />
                     <div className="h-24 bg-brand-teal rounded-lg p-2">
-                      <div className="h-2 w-10 bg-white/30 rounded mb-2"></div>
-                      <div className="h-4 w-20 bg-white/60 rounded"></div>
+                      <div className="h-2 w-10 bg-white/30 rounded mb-2" />
+                      <div className="h-4 w-20 bg-white/60 rounded" />
                     </div>
-                    <div className="h-12 bg-white/10 rounded-lg"></div>
+                    <div className="h-12 bg-white/10 rounded-lg" />
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Floating Cards (kept from your original) */}
+            {/* Floating Cards */}
             <motion.div
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
