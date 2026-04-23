@@ -62,7 +62,7 @@ export default function CoachHero() {
               {/* Lower half: Image to fill empty space */}
               <div className="absolute bottom-0 left-0 right-0 h-1/2">
                 <img 
-                  src="https://picsum.photos/id/1015/800/400" 
+                  src="/coachimg.png" 
                   alt="Body Composition Dashboard"
                   className="w-full h-full object-cover"
                 />
