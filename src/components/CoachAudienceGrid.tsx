@@ -43,7 +43,7 @@ const useCases = [
       'Provide motivating insights like metabolic age, basal metabolic rate, and body fat trends',
       'Celebrate non-scale victories that keep clients motivated and reduce churn'
     ],
-    image: 'https://picsum.photos/id/102/800/600'
+    image: '/progress.png'
   },
   {
     id: 'personalization',
