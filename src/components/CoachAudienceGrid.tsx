@@ -15,7 +15,7 @@ const useCases = [
       'Reduce friction to first value — no equipment, no gym visit, just immediate results',
       'Proven to drive significantly higher conversion rates than traditional free trials'
     ],
-    image: 'https://picsum.photos/id/1015/800/600' // ← Replace with real images
+    image: '/acquisition.png' // ← Replace with real images
   },
   {
     id: 'engagement',
@@ -29,7 +29,7 @@ const useCases = [
       'Create powerful habit loops — clients who see progress scan more often',
       'Differentiate your coaching with clinical-grade body tracking clients love'
     ],
-    image: 'https://picsum.photos/id/1016/800/600'
+    image: '/engagement.png'
   },
   {
     id: 'progress',
